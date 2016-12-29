@@ -3,7 +3,7 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>pagePiling.js plugin</title>
+	<title>UnoharaKeigo webSite</title>
 	<meta name="author" content="Alvaro Trigo Lopez" />
 	<meta name="description" content="pagePiling.js plugin by Alvaro Trigo." />
 	<meta name="keywords"  content="pile,piling,piling.js,stack,pages,scrolling,stacking,touch,fullpile,scroll,plugin,jquery" />
@@ -34,7 +34,7 @@ var deleteLog = false;
 	    	$('#pagepiling').pagepiling({
 	    		menu: '#menu',
 	    		anchors: ['page1', 'page2', 'page3', 'page4'],
-			    sectionsColor: ['#001721', '#001721', '#fff', '#fff'],
+			    sectionsColor: ['#fff', '#fff', '#fff', '#fff'],
 			   	  
 			    afterLoad: function(anchorLink, index){
 			    	$('#callbacksDiv').append('<p>afterLoad - anchorLink:' + anchorLink + " index:" + index + '</p>');
@@ -105,11 +105,13 @@ var deleteLog = false;
 	 * --------------------------------------- */
 
 	#section1 h1{
-		color: #e0e0c0;
+		font-family: "はれのそら明朝","07ロゴたいぷゴシックCondense",'Lato', Calibri, Arial, sans-serif;
+		color: #142c54;
 		font-size: 5em;
 	}
 	#section1 p{
-	    color: #fff;
+	    color: #888;
+	    transform:translateY(-30px);
 	}
 	#section1 img{
 		margin: 20px 0;
@@ -145,7 +147,7 @@ var deleteLog = false;
 	#section2 #title p{
 		z-index: 4;
 		font-size: 6em;
-		color: #969696;
+		color: #444;
 		transform: translateY(30px);
 	}
 	#section2 #title{
@@ -166,7 +168,7 @@ height:480px;
 	#section2 #detail{
       opacity: 1;
       transform: translateX(0px);
-      color: #fff;
+      color: #000;
 	}
 	.fade{
 		opacity: 0;
@@ -305,19 +307,17 @@ $('.tgt').children('span:eq('+i+')').not('.cur').delay(90*i).fadeIn(10);
 
 
 	    <div class="section" id="section1">
-	    	<h1 >KAZUMA MATSUO</h1>
+	    	<h1 >卯之原&nbsp;圭吾</h1>
 	    <div class="parent">
-	    <div id="target">
-			<p class="tgt">PortfolioSite</p>
+			<p>Portfolio Site</p>
 			<!--<div id="japanese"><p>明治大学　宮下研究室</p></div>-->
-		</div>
 		</div>
 
 	    </div>
 	    <div class="section" id="section2">
 	    	<!--<div id ="background"></div>--> <!--background-color setup -->
 	    	<div class="intro">
-	    		<div id="colors"></div>
+	    		<!--<div id="colors"></div>-->
 	    		<div id="pat">
 	    		<div id="title"><p>Profile</p></div>
 	    		</div>
@@ -336,24 +336,24 @@ $('.tgt').children('span:eq('+i+')').not('.cur').delay(90*i).fadeIn(10);
 			<div class="main">
 				<div id="mi-slider" class="mi-slider">
 					<ul>
-						<li><a href="#"><img src="examples/images/kimuraShake2014.png" alt="img01"><h4>シェイクスピアプロジェクト 2013年</h4></a></li>
-						<li><a href="#"><img src="examples/images/kimuraShake2013.png" alt="img02"><h4>シェイクスピアプロジェクト　2014年</h4></a></li>
+						<li><a href="http://www.kisc.meiji.ac.jp/~bunpro/past.html#ヘンリー四世"><img src="examples/images/kimuraShake2014.png" alt="img01"><h4>ヘンリー四世</h4></a></li>
+						<li><a href="http://www.kisc.meiji.ac.jp/~bunpro/past.html#組曲　道化と王冠"><img src="examples/images/kimuraShake2013.png" alt="img02"><h4>道化と王冠</h4></a></li>
 					</ul>
 					<ul>
-						<li><a href="#"><img src="examples/images/OwoEni.png" alt="img05"><h4>OをEに変えてくれ</h4></a></li>
-						<li><a href="#"><img src="examples/images/akaoni.png" alt="img06"><h4>赤鬼</h4></a></li>
-						<li><a href="#"><img src="examples/images/MOMO.png" alt="img07"><h4>ミュージカルMOMO</h4></a></li>
+						<li><a href="https://twitter.com/search?q=o%E3%82%92e%E3%81%AB%E5%A4%89%E3%81%88%E3%81%A6%E3%81%8F%E3%82%8C&src=typd&lang=ja"><img src="examples/images/OwoEni.png" alt="img05"><h4>OをEに変えてくれ</h4></a></li>
+						<li><a href="https://twitter.com/search?q=%E6%98%8E%E6%B2%BB%E5%A4%A7%E5%AD%A6%E3%80%80%E8%B5%A4%E9%AC%BC&src=typd&lang=ja"><img src="examples/images/akaoni.png" alt="img06"><h4>赤鬼</h4></a></li>
+						<li><a href="http://stage.corich.jp/stage/55503"><img src="examples/images/MOMO.png" alt="img07"><h4>ミュージカルMOMO</h4></a></li>
 					</ul>
 					<ul>
-						<li><a href="#"><img src="examples/images/hanshin.png" alt="img09"><h4>半神</h4></a></li>
-						<li><a href="#"><img src="examples/images/nougyouGirl.png" alt="img10"><h4>農業少女</h4></a></li>
+						<li><a href="http://stage.corich.jp/stage/71242"><img src="examples/images/hanshin.png" alt="img09"><h4>半神</h4></a></li>
+						<li><a href="http://stage.corich.jp/stage_main/50514"><img src="examples/images/nougyouGirl.png" alt="img10"><h4>農業少女</h4></a></li>
 					</ul>
 					<ul>
-						<li><a href="#"><img src="examples/images/kirin.png" alt="img12"><h4>東益平七丁目団地防衛隊</h4></a></li>
+						<li><a href="https://www.youtube.com/watch?v=smSa71-QsAU"><img src="examples/images/kirin.png" alt="img12"><h4>東益平七丁目団地防衛隊</h4></a></li>
 					</ul>
 					<nav>
 						<a href="#">シェイクスピアプロジェクト</a>
-						<a href="#">学内公園</a>
+						<a href="#">学内公演</a>
 						<a href="#">ナナイロスペース</a>
 						<a href="#">OTHERS</a>
 					</nav>
