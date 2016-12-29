@@ -3,11 +3,11 @@
 }
 
 #section4 #photos img {
-  width: 30%;
+  width: 25%;
   float: left;
   display: block;
   margin: 2px;
-  transform: translateX(30px);
+  transform: translateX(40px);
 }
 
 #section4 ul {
@@ -15,7 +15,7 @@
   margin: 0px auto;
   padding: 10px;
   display: block;
-  max-width: 65%;
+  max-width: 70%;
   text-align: center;
 }
 
