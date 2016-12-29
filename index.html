@@ -146,7 +146,7 @@ var deleteLog = false;
 	}
 	#section2 #title p{
 		z-index: 4;
-		font-size: 6em;
+		font-size: 5em;
 		color: #444;
 		transform: translateY(30px);
 	}
@@ -175,13 +175,20 @@ height:480px;
 	}
 
 	#section2 #colors{
-		right: 60px;
-		bottom: 0;
-		position: absolute;
-		height: 413px;
-		width: 258px;
-		background-image: url(examples/imgs/colors.gif);
+		display: inline-block;
+		text-align: center;
+		left: 0px;
+		right:0px;
+		bottom: 20px;
+		display:fixed;
+		height: 70%;
+		width: 100%;
+		background-image: url(examples/images/unohara.png);
 		background-repeat: no-repeat;
+	}
+	#section2 #colors img{
+		width:100px;
+		height:auto;
 	}
 
 	#section2 #background {
@@ -201,6 +208,10 @@ height:480px;
 		left: 60px;
 		bottom: 0;
 	}
+	#section3 h1{
+		font-size:3em;
+	}
+	
 	#section3 p{
 		color: #757575;
 	}
@@ -229,6 +240,18 @@ height:480px;
 	 * --------------------------------------- */
 	#section4 p{
 		opacity: 0.6;
+	}
+	
+	#section4 h1{
+		color:#222;
+		font-size:3em;
+	}
+	
+	#section4 #clearfix{
+		top:0px;
+		right:0px;
+		left:0px;
+		position:absolute;
 	}
 
 	/* Overwriting fullPage.js tooltip color
@@ -310,6 +333,7 @@ $('.tgt').children('span:eq('+i+')').not('.cur').delay(90*i).fadeIn(10);
 	    	<h1 >卯之原&nbsp;圭吾</h1>
 	    <div class="parent">
 			<p>Portfolio Site</p>
+			
 			<!--<div id="japanese"><p>明治大学　宮下研究室</p></div>-->
 		</div>
 
@@ -317,7 +341,7 @@ $('.tgt').children('span:eq('+i+')').not('.cur').delay(90*i).fadeIn(10);
 	    <div class="section" id="section2">
 	    	<!--<div id ="background"></div>--> <!--background-color setup -->
 	    	<div class="intro">
-	    		<!--<div id="colors"></div>-->
+	    		
 	    		<div id="pat">
 	    		<div id="title"><p>Profile</p></div>
 	    		</div>
@@ -327,11 +351,12 @@ $('.tgt').children('span:eq('+i+')').not('.cur').delay(90*i).fadeIn(10);
 	    		<p>興味分野 : HCI ・ Digital health and wellbeing ・ Affective computing</p>
 	    		</div>
 	    	</div>
+	    	<!--<div id="colors"></div>-->
 	    </div>
 	    <div class="section" id="section3">
 <div class="container">	
 			<header class="clearfix">
-				<h1>Simple Multi-Item Slider <span>Category slider with CSS animations</span></h1>
+				<h1>Cast history</h1>
 			</header>
 			<div class="main">
 				<div id="mi-slider" class="mi-slider">
@@ -362,50 +387,53 @@ $('.tgt').children('span:eq('+i+')').not('.cur').delay(90*i).fadeIn(10);
 		</div><!-- /container -->
 	    </div>
 	    <div class="section" id="section4">
-
+            <header class="clearfix" id="clearfix">
+				<h1>Cast history</h1>
+			</header>
 	    <div id="photos">
   <ul id="photo-gallery">
     <li>
-      <a href="http://41.media.tumblr.com/0390d80d6c8cc4a7096033182a4bfe8a/tumblr_ndyvukSjNl1tubinno1_1280.jpg">
-        <img src="http://41.media.tumblr.com/0390d80d6c8cc4a7096033182a4bfe8a/tumblr_ndyvukSjNl1tubinno1_1280.jpg">
+      <a href="examples/images/a.JPG">
+        <img src="examples/images/a.JPG">
       </a>
     </li>
     <li>
-      <a href="http://40.media.tumblr.com/bbe414414f4fd1f0b4886c6fcf4193de/tumblr_ndyvd3qoiL1tubinno1_1280.jpg">
-        <img src="http://40.media.tumblr.com/bbe414414f4fd1f0b4886c6fcf4193de/tumblr_ndyvd3qoiL1tubinno1_1280.jpg">
+      <a href="examples/images/b.JPG">
+        <img src="examples/images/b.JPG">
       </a>
     </li>
     <li>
-      <a href="http://41.media.tumblr.com/3dde93f097de5e9db4f11b67729d6a2e/tumblr_na06dk1vWM1tubinno1_1280.jpg">
-        <img src="http://41.media.tumblr.com/3dde93f097de5e9db4f11b67729d6a2e/tumblr_na06dk1vWM1tubinno1_1280.jpg">
+      <a href="examples/images/c.JPG">
+        <img src="examples/images/c.JPG">
       </a>
     </li>
     <li>
-      <a href="http://40.media.tumblr.com/e67b59d43c79c496b6fa8f1dddabef47/tumblr_nbc7zx6vJl1tubinno1_1280.jpg">
-        <img src="http://40.media.tumblr.com/e67b59d43c79c496b6fa8f1dddabef47/tumblr_nbc7zx6vJl1tubinno1_1280.jpg">
+      <a href="examples/images/d.JPG">
+        <img src="examples/images/d.JPG">
       </a>
     </li>
     <li>
-      <a href="http://40.media.tumblr.com/d94d2a63ab509f403111c6e8ebfc22a4/tumblr_ndyfu61hzH1tubinno1_1280.jpg">
-        <img src="http://40.media.tumblr.com/d94d2a63ab509f403111c6e8ebfc22a4/tumblr_ndyfu61hzH1tubinno1_1280.jpg"></a>
+      <a href="examples/images/f.JPG">
+        <img src="examples/images/f.JPG"></a>
     </li>
     <li>
-      <a href="http://40.media.tumblr.com/d7a014af6eaec53ccdc7a4171033f96d/tumblr_na06t4fnlI1tubinno1_1280.jpg">
-        <img src="http://40.media.tumblr.com/d7a014af6eaec53ccdc7a4171033f96d/tumblr_na06t4fnlI1tubinno1_1280.jpg">
+      <a href="examples/images/g.JPG">
+        <img src="examples/images/g.JPG">
       </a>
     </li>
     <li>
-      <a href="http://40.media.tumblr.com/7302cf024c924726c6ad99bb80b0be41/tumblr_nauccbKUCw1tubinno1_1280.jpg">
-        <img src="http://40.media.tumblr.com/7302cf024c924726c6ad99bb80b0be41/tumblr_nauccbKUCw1tubinno1_1280.jpg">
+      <a href="examples/images/h.JPG">
+        <img src="examples/images/h.JPG">
       </a>
     </li>
     <li>
-      <a href="http://41.media.tumblr.com/fddb3f2b0bdf390efd7ea87372e75fa5/tumblr_ndyg3pYbKW1tubinno1_1280.jpg"><img src="http://41.media.tumblr.com/fddb3f2b0bdf390efd7ea87372e75fa5/tumblr_ndyg3pYbKW1tubinno1_1280.jpg">
+      <a href="examples/images/e.JPG">
+      	<img src="examples/images/e.JPG">
       </a>
     </li>
     <li>
-      <a href="http://41.media.tumblr.com/758a5cb9046fde53138ad0f55527ca25/tumblr_ndyfdoR6Wp1tubinno1_1280.jpg">
-        <img src="http://41.media.tumblr.com/758a5cb9046fde53138ad0f55527ca25/tumblr_ndyfdoR6Wp1tubinno1_1280.jpg">
+      <a href="examples/images/IMG_2185.JPG">
+        <img src="examples/images/IMG_2185.JPG">
       </a>
     </li>
   </ul>
