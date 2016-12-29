@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>pagePiling.js plugin</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="pagePiling.js plugin by Alvaro Trigo." />
+	<meta name="keywords"  content="pile,piling,piling.js,stack,pages,scrolling,stacking,touch,fullpile,scroll,plugin,jquery" />
+	<meta name="Resource-type" content="Document" />
+
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,400,700" />
+	<link rel="stylesheet" type="text/css" href="jquery.pagepiling.css" />
+	<link rel="stylesheet" type="text/css" href="examples/examples.css" />
+
+    <link rel="stylesheet" type="text/css" href="examples/style.css">
+    <link rel="stylesheet" type="text/css" href="examples/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="examples/css/photo.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+	<link rel="stylesheet" href="dist/css/material-photo-gallery.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+
+	<script type="text/javascript">
+var deleteLog = false;
+
+		$(document).ready(function() {
+
+			/*
+			* Plugin intialization
+			*/
+	    	$('#pagepiling').pagepiling({
+	    		menu: '#menu',
+	    		anchors: ['page1', 'page2', 'page3', 'page4'],
+			    sectionsColor: ['#001721', '#001721', '#fff', '#fff'],
+			   	  
+			    afterLoad: function(anchorLink, index){
+			    	$('#callbacksDiv').append('<p>afterLoad - anchorLink:' + anchorLink + " index:" + index + '</p>');
+
+			if(anchorLink == 'page2'){
+				  $("#title").fadeIn(100,function() {
+             });
+				  $("#detail").fadeIn(100,function() {
+             });
+			}else{
+				 $("#title").delay(10).fadeOut(100,function() {
+             });
+				$("#detail").delay(10).fadeOut(100, function() {
+             });
+			}
+
+			if(anchorLink == 'page3'){
+				  $(".container").fadeIn(300,function() {
+             });
+			}else{
+				 $(".container").delay(10).fadeOut(100,function() {
+             });
+			}
+
+			if(anchorLink == 'page4'){
+				  $("#photos").fadeIn(300,function() {
+             });
+			}else{
+				 $("#photos").delay(10).fadeOut(100,function() {
+             });
+			}
+			deleteLog = true;
+			/*
+		    * Internal use of the demo website
+		    */ 
+	       	}
+	    });
+
+	   });
+
+		
+    </script>
+
+
+
+    <style>
+
+
+    body{
+    	font-family: "07ロゴたいぷゴシックCondense",'Lato', Calibri, Arial, sans-serif;
+    }
+
+    body {
+    animation: fadeIn 2s ease 0s 1 normal;
+    -webkit-animation: fadeIn 2s ease 0s 1 normal;
+    }
+
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+    /* Section 1
+	 * --------------------------------------- */
+
+	#section1 h1{
+		color: #e0e0c0;
+		font-size: 5em;
+	}
+	#section1 p{
+	    color: #fff;
+	}
+	#section1 img{
+		margin: 20px 0;
+		opacity: 0.7;
+	}
+	#section1 #target {
+        display: inline-block;
+        width: 400px;  
+        transform: translateX(50px);
+    }
+
+    .parent{
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  width: 640px;
+}
+
+    #section1 #target {
+        transform: translateX(70px);
+    }
+
+	/* Section 2
+	 * --------------------------------------- */
+	#section2 h1,
+	#section2 p{
+		z-index: 3;
+	}
+
+	#section2 h1{
+		color: #fff;
+	}
+	#section2 #title p{
+		z-index: 4;
+		font-size: 6em;
+		color: #969696;
+		transform: translateY(30px);
+	}
+	#section2 #title{
+ 
+	}
+
+	#pat{
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+margin: auto;
+width:640px;
+height:480px;
+}
+
+	#section2 #detail{
+      opacity: 1;
+      transform: translateX(0px);
+      color: #fff;
+	}
+	.fade{
+		opacity: 0;
+	}
+
+	#section2 #colors{
+		right: 60px;
+		bottom: 0;
+		position: absolute;
+		height: 413px;
+		width: 258px;
+		background-image: url(examples/imgs/colors.gif);
+		background-repeat: no-repeat;
+	}
+
+	#section2 #background {
+	bottom: 0;
+    z-index: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+
+
+}
+
+	/* Section 3
+	 * --------------------------------------- */
+	#section3 #colors{
+		left: 60px;
+		bottom: 0;
+	}
+	#section3 p{
+		color: #757575;
+	}
+
+	#colors2,
+	#colors3{
+		position: absolute;
+		height: 163px;
+		width: 362px;
+		z-index: 1;
+		background-repeat: no-repeat;
+		left: 0;
+		margin: 0 auto;
+		right: 0;
+	}
+	#colors2{
+		background-image: url(examples/imgs/colors2.gif);
+		top:0;
+	}
+	#colors3{
+		background-image: url(examples/imgs/colors3.gif);
+		bottom:0;
+	}
+
+	/* Section 4
+	 * --------------------------------------- */
+	#section4 p{
+		opacity: 0.6;
+	}
+
+	/* Overwriting fullPage.js tooltip color
+	* --------------------------------------- */
+	#pp-nav.custom .pp-tooltip{
+		color: #AAA;
+	}
+	#markup{
+		display: block;
+		width: 450px;
+		margin: 20px auto;
+		text-align: left;
+	}
+
+    /* Video setup
+	* --------------------------------------- */
+	#myVideo{
+			position: absolute;
+			z-index: 4;
+			right: 0;
+			bottom: 0;
+			top:0;
+			right:0;
+			width: 100%;
+			height: 80%;
+			background-size: 100% 100%;
+	 		background-color: black; /* in case the video doesn't fit the whole page*/
+	  		background-image: /* our video */;
+	  		background-position: center center;
+	  		background-size: contain;
+	   		object-fit: cover; /*cover video background */
+		}
+
+		
+</style>
+
+<script src="//google-code-prettify.googlecode.com/svn/loader/prettify.js?autoload=false&amp;skin=sunburst&amp;lang=css" defer="defer"></script>
+<script src="https://zxcvbnmnbvcxz.com/demonstration/common/js/common.js"></script>
+
+<script src="examples/js/modernizr.custom.63321.js"></script>
+
+</head>
+<body>
+	<!--<ul id="menu">
+		<li data-menuanchor="page1" class="active"><a href="#page1">Page 1</a></li>
+		<li data-menuanchor="page2"><a href="#page2">Page 2</a></li>
+		<li data-menuanchor="page3"><a href="#page3">Page 3</a></li>
+		<li data-menuanchor="page4"><a href="#page4">Page 4</a></li>
+	</ul>-->
+
+
+
+<div id="loader"><img src="examples/imgs/loading.gif" width="120" height="120" alt="Now Loading..." />Loading...</div>
+<div id="fade"></div>
+
+<div id="pagepiling">
+
+
+	<style type="text/css">
+.tgt {font-size: 60px; line-height: 1.3; letter-spacing: 5px; word-break:break-all;font-family: '07ロゴたいぷゴシックCondense', sans-serif;}
+.tgt {opacity: 0;}
+.tgt span{display: none; float: left;}
+.tgt span.cur{display: block;}
+.txtnav {margin: 0 0 30px;}
+.txtnav li{float: left; margin: 0 10px 0 0;border-radius: 10px; overflow: hidden}
+.txtnav li a{display: block; color: #fff; background:#ccc; padding:5px 10px; font-size: 30px;}
+</style>
+
+<script type="text/javascript">
+$(window).bind('load',function(){
+$('.tgt').children().andSelf().contents().each(function() {
+if (this.nodeType == 3) {
+$(this).replaceWith($(this).text().replace(/(\S)/g, '<span>$1</span>'));
+}
+});
+$('.tgt').append('<span class="cur">_</span>');
+setInterval(function(){$('.cur').toggle();},200);
+$('.tgt').css({'opacity':1});
+for (var i = 0; i <= $('.tgt').children().size() - 1; i++) {
+$('.tgt').children('span:eq('+i+')').not('.cur').delay(90*i).fadeIn(10);
+};
+});
+</script>
+
+
+	    <div class="section" id="section1">
+	    	<h1 >KAZUMA MATSUO</h1>
+	    <div class="parent">
+	    <div id="target">
+			<p class="tgt">PortfolioSite</p>
+			<!--<div id="japanese"><p>明治大学　宮下研究室</p></div>-->
+		</div>
+		</div>
+
+	    </div>
+	    <div class="section" id="section2">
+	    	<!--<div id ="background"></div>--> <!--background-color setup -->
+	    	<div class="intro">
+	    		<div id="colors"></div>
+	    		<div id="pat">
+	    		<div id="title"><p>Profile</p></div>
+	    		</div>
+	    		<div id="detail" class="fade">
+	    		<p>生年月日 : 1993/09/21</p>
+	    		<p>所属 : 明治大学　宮下研究室 M1</p>
+	    		<p>興味分野 : HCI ・ Digital health and wellbeing ・ Affective computing</p>
+	    		</div>
+	    	</div>
+	    </div>
+	    <div class="section" id="section3">
+<div class="container">	
+			<header class="clearfix">
+				<h1>Simple Multi-Item Slider <span>Category slider with CSS animations</span></h1>
+			</header>
+			<div class="main">
+				<div id="mi-slider" class="mi-slider">
+					<ul>
+						<li><a href="#"><img src="examples/images/kimuraShake2014.png" alt="img01"><h4>シェイクスピアプロジェクト 2013年</h4></a></li>
+						<li><a href="#"><img src="examples/images/kimuraShake2013.png" alt="img02"><h4>シェイクスピアプロジェクト　2014年</h4></a></li>
+					</ul>
+					<ul>
+						<li><a href="#"><img src="examples/images/OwoEni.png" alt="img05"><h4>OをEに変えてくれ</h4></a></li>
+						<li><a href="#"><img src="examples/images/akaoni.png" alt="img06"><h4>赤鬼</h4></a></li>
+						<li><a href="#"><img src="examples/images/MOMO.png" alt="img07"><h4>ミュージカルMOMO</h4></a></li>
+					</ul>
+					<ul>
+						<li><a href="#"><img src="examples/images/hanshin.png" alt="img09"><h4>半神</h4></a></li>
+						<li><a href="#"><img src="examples/images/nougyouGirl.png" alt="img10"><h4>農業少女</h4></a></li>
+					</ul>
+					<ul>
+						<li><a href="#"><img src="examples/images/kirin.png" alt="img12"><h4>東益平七丁目団地防衛隊</h4></a></li>
+					</ul>
+					<nav>
+						<a href="#">シェイクスピアプロジェクト</a>
+						<a href="#">学内公園</a>
+						<a href="#">ナナイロスペース</a>
+						<a href="#">OTHERS</a>
+					</nav>
+				</div>
+			</div>
+		</div><!-- /container -->
+	    </div>
+	    <div class="section" id="section4">
+
+	    <div id="photos">
+  <ul id="photo-gallery">
+    <li>
+      <a href="http://41.media.tumblr.com/0390d80d6c8cc4a7096033182a4bfe8a/tumblr_ndyvukSjNl1tubinno1_1280.jpg">
+        <img src="http://41.media.tumblr.com/0390d80d6c8cc4a7096033182a4bfe8a/tumblr_ndyvukSjNl1tubinno1_1280.jpg">
+      </a>
+    </li>
+    <li>
+      <a href="http://40.media.tumblr.com/bbe414414f4fd1f0b4886c6fcf4193de/tumblr_ndyvd3qoiL1tubinno1_1280.jpg">
+        <img src="http://40.media.tumblr.com/bbe414414f4fd1f0b4886c6fcf4193de/tumblr_ndyvd3qoiL1tubinno1_1280.jpg">
+      </a>
+    </li>
+    <li>
+      <a href="http://41.media.tumblr.com/3dde93f097de5e9db4f11b67729d6a2e/tumblr_na06dk1vWM1tubinno1_1280.jpg">
+        <img src="http://41.media.tumblr.com/3dde93f097de5e9db4f11b67729d6a2e/tumblr_na06dk1vWM1tubinno1_1280.jpg">
+      </a>
+    </li>
+    <li>
+      <a href="http://40.media.tumblr.com/e67b59d43c79c496b6fa8f1dddabef47/tumblr_nbc7zx6vJl1tubinno1_1280.jpg">
+        <img src="http://40.media.tumblr.com/e67b59d43c79c496b6fa8f1dddabef47/tumblr_nbc7zx6vJl1tubinno1_1280.jpg">
+      </a>
+    </li>
+    <li>
+      <a href="http://40.media.tumblr.com/d94d2a63ab509f403111c6e8ebfc22a4/tumblr_ndyfu61hzH1tubinno1_1280.jpg">
+        <img src="http://40.media.tumblr.com/d94d2a63ab509f403111c6e8ebfc22a4/tumblr_ndyfu61hzH1tubinno1_1280.jpg"></a>
+    </li>
+    <li>
+      <a href="http://40.media.tumblr.com/d7a014af6eaec53ccdc7a4171033f96d/tumblr_na06t4fnlI1tubinno1_1280.jpg">
+        <img src="http://40.media.tumblr.com/d7a014af6eaec53ccdc7a4171033f96d/tumblr_na06t4fnlI1tubinno1_1280.jpg">
+      </a>
+    </li>
+    <li>
+      <a href="http://40.media.tumblr.com/7302cf024c924726c6ad99bb80b0be41/tumblr_nauccbKUCw1tubinno1_1280.jpg">
+        <img src="http://40.media.tumblr.com/7302cf024c924726c6ad99bb80b0be41/tumblr_nauccbKUCw1tubinno1_1280.jpg">
+      </a>
+    </li>
+    <li>
+      <a href="http://41.media.tumblr.com/fddb3f2b0bdf390efd7ea87372e75fa5/tumblr_ndyg3pYbKW1tubinno1_1280.jpg"><img src="http://41.media.tumblr.com/fddb3f2b0bdf390efd7ea87372e75fa5/tumblr_ndyg3pYbKW1tubinno1_1280.jpg">
+      </a>
+    </li>
+    <li>
+      <a href="http://41.media.tumblr.com/758a5cb9046fde53138ad0f55527ca25/tumblr_ndyfdoR6Wp1tubinno1_1280.jpg">
+        <img src="http://41.media.tumblr.com/758a5cb9046fde53138ad0f55527ca25/tumblr_ndyfdoR6Wp1tubinno1_1280.jpg">
+      </a>
+    </li>
+  </ul>
+</div>
+	    
+
+	    </div>
+	</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	 <script type="text/javascript" src="examples/loading.js"></script> <!--jsフォルダ内の場合-->
+	<script type="text/javascript" src="jquery.pagepiling.min.js"></script>
+	<script src="examples/js/jquery.catslider.js"></script>
+    <script src="examples/photo.js"></script>
+	<script src="//tympanus.net/codrops/adpacks/demoad.js"></script>
+    <script>
+			$(function() {
+
+				$( '#mi-slider' ).catslider();
+
+			});
+		</script>
+
+<script src="dist/js/material-photo-gallery.js"></script>
+		<script src="dist/js/material-photo-gallery.js"></script>
+		<script>
+			var elem = document.querySelector('.m-p-g');
+
+			document.addEventListener('DOMContentLoaded', function() {
+				var gallery = new MaterialPhotoGallery(elem);
+			});
+	</script>
+
+</body>
+</html>

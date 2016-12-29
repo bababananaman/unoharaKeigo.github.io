@@ -1,0 +1,44 @@
+#section4 #photos {
+  opacity: .88;
+}
+
+#section4 #photos img {
+  width: 100%;
+  float: left;
+  display: block;
+  margin: 2px;
+}
+
+#section4 ul {
+  list-style: none;
+  margin: 0px auto;
+  padding: 10px;
+  display: block;
+  max-width: 1440px;
+  text-align: center;
+}
+
+#section4 #overlay {
+  background: rgba(0,0,0, .8);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  text-align: center;
+}
+
+#section4 #overlay img {
+  margin: 10% auto 0;
+  width: 550px;
+  border-radius: 5px;
+}
+
+#section4 #photos {
+  width: 100%;
+}
+
+#section4 #photo-gallery {
+  width: 100%;
+}

@@ -1,0 +1,31 @@
+
+
+#loader {
+    width: 120px;
+    height: 120px;
+    display: none;
+    position: fixed;
+    _position: absolute; /* IE6対策 */
+    top: 50%;
+    left: 50%;
+    margin-top: -20px; /* heightの半分のマイナス値 */
+    margin-left: -20px; /* widthの半分のマイナス値 */
+    font-size: 1.6em;
+    z-index: 100;
+    color: #fff;
+}
+ 
+#loader{
+    transform: translateY(-100px);
+}
+
+#fade {
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: #001721;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 50;
+}
