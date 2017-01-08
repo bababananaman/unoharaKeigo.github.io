@@ -7,15 +7,16 @@
   float: left;
   display: block;
   margin: 2px;
-  transform: translateX(40px);
+  
 }
 
 #section4 ul {
   list-style: none;
   margin: 0px auto;
-  padding: 10px;
+  padding: 10px 0px;
   display: block;
-  max-width: 70%;
+  max-width: 90%;
+  transform: translateX(10%);
   text-align: center;
 }
 
