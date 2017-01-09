@@ -1,8 +1,8 @@
 
 
 #loader {
-    width: 120px;
-    height: 120px;
+    width: 320px;
+    height: 180px;
     display: none;
     position: fixed;
     _position: absolute; /* IE6対策 */
@@ -17,6 +17,7 @@
  
 #loader{
     transform: translateY(-100px);
+    transform: translateX(-160px);
 }
 
 #fade {
