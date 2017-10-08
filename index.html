@@ -152,6 +152,16 @@ height:480px;
       transform: translateX(0px);
       color: #000;
 	}
+	    #section1 #yokoku{
+		color:#1111cc;
+		transform:translateY(30px);
+		font-size: 0.6em;
+	}
+	#section1 #yokokuTitle{
+		color:#333;
+		transform:translateY(20px);
+		font-size: 1.2em;
+	}    
 	.fade{
 		opacity: 0;
 	}
@@ -177,16 +187,7 @@ height:480px;
 		font-size: 0.8em;
 	}
 
-	#section2 #detail #yokoku{
-		color:#1111cc;
-		transform:translateY(170px);
-		font-size: 0.6em;
-	}
-	#section2 #detail #yokokuTitle{
-		color:#333;
-		transform:translateY(150px);
-		font-size: 1.2em;
-	}    
+	
 	#section2 a{
 		color:#333;
 	}
@@ -325,9 +326,15 @@ $('.tgt').children('span:eq('+i+')').not('.cur').delay(90*i).fadeIn(10);
 	    	<h1 >卯ノ原&nbsp;圭吾</h1>
 	    <div class="parent">
 			<p>Portfolio Site</p>
-			
+		        <div id="yokokuTitle">
+			<p class="cbutton cbutton--effect-radomir">卯ノ原圭吾　次回作情報！</p>
+			</div>
+			<div id="yokoku">    
+	    		<p class="cbutton cbutton--effect-radomir"><a href="http://jasmine.tiesbrick.co.jp/">公式サイト</a>&nbsp;&nbsp;&nbsp;<a href="http://ticket.corich.jp/apply/85785/009/">卯ノ原扱いの予約フォーム</a></p>
+	    		</div>	
 			<!--<div id="japanese"><p>明治大学　宮下研究室</p></div>-->
 		</div>
+		   
 
 	    </div>
 	    <div class="section" id="section2">
@@ -348,12 +355,7 @@ $('.tgt').children('span:eq('+i+')').not('.cur').delay(90*i).fadeIn(10);
 	    		<div id="link">    
 	    		<p class="cbutton cbutton--effect-radomir"><a href="https://twitter.com/kim135k?lang=ja">twitter</a>&nbsp;&nbsp;&nbsp;<a href="https://www.facebook.com/keigo.kimura.92?fref=ts">facebook</a></p>
 	    		</div>
-			<div id="yokokuTitle">
-			<p class="cbutton cbutton--effect-radomir">卯ノ原圭吾　次回作情報！</p>
-			</div>
-			<div id="yokoku">    
-	    		<p class="cbutton cbutton--effect-radomir"><a href="http://jasmine.tiesbrick.co.jp/">公式サイト</a>&nbsp;&nbsp;&nbsp;<a href="http://ticket.corich.jp/apply/85785/009/">卯ノ原扱いの予約フォーム</a></p>
-	    		</div>
+			
 	    		</div>
 	    	</div>
 	    	<!--<div id="colors"></div>-->
